@@ -1,0 +1,149 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.outer-container {
+	display: flex;
+	height: 100%;
+	margin: 0;
+}
+
+.main-container {
+	margin:auto;
+	z-index: 1;
+}
+
+
+.payload_text {
+	padding: 1em;
+	display: inline-block;
+}
+
+.payload-container {
+	display: inline-block;
+	background-color: #fff;
+	border: medium solid grey;
+	border-radius: 1em;
+}
+
+#payload_edit_field {
+	width: 100%;
+	resize: none;
+/*	min-width: 40%;
+	min-height: 20em;
+	padding: 2em;
+	outline: 0;
+	border: medium solid grey;
+	border-radius: 1em;
+	display: inline-block;
+	box-sizing: border-box;
+	line-height: 1.5em;
+	font-family: inherit;*/
+}
+
+#edit-button {
+	background-color: inherit;
+	border: none;
+	color: grey;
+	font-size: 3em;
+	padding: 0em;
+	margin: .3em;
+	vertical-align: top;
+}
+
+#edit-button:hover {
+	color: black;
+}
+
+.sorting-selector-container {
+	padding: .5em 2em .5em 2em;
+	margin-bottom: .2em;
+	border-radius: 2em;
+	background-color: #000;
+}
+
+.sorting-selector-container input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.sorting-selector-container label {
+	position: relative;
+	padding: .5em;
+	color: #49f;
+	font-weight: bold;
+}
+
+.sorting-selector-container a {
+	background-color: inherit;
+	border: none;
+	color: white;
+	font-size: inherit;
+	font-weight: bold;
+}
+
+.sorting-selector-container a:hover {
+	color: #f90;
+}
+
+.sorting-selector-container input[type="radio"]:hover + label,
+.sorting-selector-container input[type="radio"]:focus + label {
+	color: #ccc;
+}
+
+.sorting-selector-container input[type="radio"]:checked + label {
+	outline: 2px solid #f90;
+	outline-offset: -2px;
+	color: #f90;
+}
+
+.sort-order-separator {
+	background-color: #fff;
+	display: inline;
+	padding: .1em;
+}
+
+.overlay {
+	width: 100%;
+	margin-left: -100%;
+	display: flex;
+	background: rgba(0, 0, 0, 0.5);
+	transition: opacity 200ms;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 2;
+}
+
+.overlay .cancel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	z-index: 3;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.modal {
+	margin: .5em 2em .5em 2em;
+	width: 100%;
+	padding: .2em;
+	background: #fff;
+	border: 1px solid #666;
+	border-radius: .2em;
+	box-shadow: 0 0 5em rgba(0, 0, 0, 0.5);
+	display: flex;
+	z-index: 4;
+}
+
+#custom_sorting_order_edit_field {
+	width: 100%;
+	resize: none;
+}
+
+
